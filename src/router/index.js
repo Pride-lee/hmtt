@@ -13,6 +13,7 @@ const routes = [
     path: '/',
     component: Layout,
     children: [
+
       { path: 'home', component: Home },
       { path: 'Video', component: Video },
       { path: 'Question', component: Question },

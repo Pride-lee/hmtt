@@ -10,16 +10,13 @@
         </template>
       </van-tabbar-item>
       <van-tabbar-item replace to="/video" icon="search"
-        >视频<template #icon>
-          <i class="toutiao toutiao-shipin"></i> </template
+        >视频<template #icon> <i class="toutiao toutiao-shipin"></i> </template
       ></van-tabbar-item>
       <van-tabbar-item replace to="/question" icon="home-o"
-        >问答<template #icon>
-          <i class="toutiao toutiao-wenda"></i> </template
+        >问答<template #icon> <i class="toutiao toutiao-wenda"></i> </template
       ></van-tabbar-item>
       <van-tabbar-item replace to="/my" icon="search"
-        >我的<template #icon>
-          <i class="toutiao toutiao-wode"></i> </template
+        >我的<template #icon> <i class="toutiao toutiao-wode"></i> </template
       ></van-tabbar-item>
     </van-tabbar>
   </div>
@@ -27,7 +24,7 @@
 
 <script>
 export default {
-  created () {},
+  created () { },
   data () {
     return {}
   },
@@ -40,10 +37,10 @@ export default {
 </script>
 
 <style scoped lang="less">
-.toutiao{
+.toutiao {
   font-size: 40px;
 }
-/deep/.van-tabbar-item__text{
+/deep/.van-tabbar-item__text {
   font-size: 20px;
 }
 </style>
