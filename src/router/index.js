@@ -17,7 +17,7 @@ const routes = [
       { path: 'home', component: Home },
       { path: 'Video', component: Video },
       { path: 'Question', component: Question },
-      { path: 'My', component: My }
+      { path: 'My', component: My, name: 'my' }
     ]
   },
   { path: '/login', component: Login }

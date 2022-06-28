@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="登录" left-arrow>
+    <van-nav-bar title="登录" @click-left="$router.back()">
       <van-icon name="cross" slot="left"
     /></van-nav-bar>
     <van-form @submit="onSubmit" ref="form">
@@ -25,7 +25,8 @@
           { pattern: /^\d{6}$/, message: '验证码必须是6位纯数字' },
         ]"
       >
-        <i class="toutiao toutiao-yanzhengma" slot="left-icon"></i>
+        <!-- <i class="toutiao toutiao-yanzhengma" slot="left-icon"></i> -->
+        <Tticon name='yanzhengma'></Tticon>
         <template #button>
           <van-count-down
             v-if="isCountDown"
@@ -59,7 +60,7 @@ export default {
   created () { },
   data () {
     return {
-      mobile: '12121212121',
+      mobile: '13911111111',
       code: '246810',
       time: 10 * 1000,
       isCountDown: false
@@ -71,6 +72,7 @@ export default {
         const res = await login(values)
         console.log(res)
         this.$store.commit('setUser', res.data.data)
+        this.$router.push({ name: 'my' })
       } catch (err) {
         console.log(err)
       }
@@ -96,7 +98,9 @@ export default {
   computed: {},
   watch: {},
   filters: {},
-  components: {}
+  components: {
+
+  }
 }
 </script>
 
